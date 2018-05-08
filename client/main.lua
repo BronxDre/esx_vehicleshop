@@ -844,7 +844,7 @@ AddEventHandler('esx_vehicleshop:hasEnteredMarker', function (zone)
       local resellPrice = math.floor(vehicleData.price / 100 * Config.ResellPercentage)
 
       CurrentAction     = 'resell_vehicle'
-      CurrentActionMsg  = _U('sell_menu', vehicleData.name, resellPrice)
+      CurrentActionMsg  = _U('sell_menu').. vehicleData.name .. _U('price') .. resellPrice
 
       CurrentActionData = {
         vehicle = vehicle,
